@@ -3,16 +3,13 @@ package se.lexicon.controller;
 import se.lexicon.dao.MeetingCalendarDao;
 import se.lexicon.dao.MeetingDao;
 import se.lexicon.dao.UserDao;
-import se.lexicon.dao.impl.MeetingCalendarDaoImpl;
 import se.lexicon.exception.CalendarExceptionHandler;
 import se.lexicon.exception.DuplicateEntryException;
-import se.lexicon.exception.MySQLException;
 import se.lexicon.model.Meeting;
 import se.lexicon.model.MeetingCalendar;
 import se.lexicon.model.User;
 import se.lexicon.view.CalendarView;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Scanner;

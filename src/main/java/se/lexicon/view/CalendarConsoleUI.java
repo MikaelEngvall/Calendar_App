@@ -8,7 +8,6 @@ import se.lexicon.model.User;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Scanner;
 
@@ -74,8 +73,8 @@ public class CalendarConsoleUI implements CalendarView {
                 System.out.println("Enter a number between 0 and " + (foundCalendars.size() - 1));
                 scanner.nextLine(); // Consume and discard the invalid input
             }
-
             meetingCalendar = foundCalendars.get(choice);
+            scanner.nextLine();
         }
 
         System.out.println("Enter a Meeting title: ");
@@ -83,6 +82,7 @@ public class CalendarConsoleUI implements CalendarView {
 
         System.out.println("Start Date & Time (yyyy-MM-dd HH:mm)");
         String start = scanner.nextLine();
+
         System.out.println("End Date & Time (yyyy-MM-dd HH:mm)");
         String end = scanner.nextLine();
 

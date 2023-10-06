@@ -80,3 +80,61 @@
 [15:39:13.022] - Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[17:55:54.751] - Authenticate user: mikael
+[17:57:44.634] - Creating user: mikael
+[17:58:58.899] - Authenticate user: mikael
+[17:59:05.054] - Creating Calendar "Jobb" for mikael
+[18:00:19.237] - Creating meeting: Intervju
+[18:31:20.504] - Authenticate user: mikael
+[18:32:29.452] - Creating meeting: Start
+[18:36:12.494] - Authenticate user: mikael
+[18:39:48.974] - Authenticate user: mikael
+[15:40:50.344] - Authenticate user: mikael
+[15:46:26.246] - Authenticate user: mikael
+[15:51:27.811] - Authenticate user: mikael
+[15:56:56.721] - Authenticate user: mikael
+[16:01:11.748] - Authenticate user: mikael
+[16:01:43.648] - Creating meeting: weeee
+[16:01:54.327] - Creating user: anders
+[16:02:18.609] - Authenticate user: anders
+[16:03:12.795] - Creating meeting: Scrum meeting
+[16:03:12.850] - Error occurred while creating meeting: Scrum meeting
+[16:03:59.345] - Creating Calendar "Work" for anders
+[16:04:29.003] - Creating meeting: Scrum
+[16:04:50.483] - Authenticate user: mikael
+[16:13:57.989] - Authenticate user: mikael
+[16:14:04.307] - Creating Calendar "Work" for mikael
+[16:14:09.601] - Creating Calendar "Privat" for mikael
+[16:14:29.989] - Creating Calendar "Private" for mikael
+[16:21:32.629] - Authenticate user: mikael
+[16:23:33.917] - Authenticate user: mikael
+[16:24:21.450] - Authenticate user: mikael
+[16:27:12.010] - Authenticate user: mikael
+[16:28:48.658] - Authenticate user: mikael
+[16:29:12.116] - Authenticate user: mikael
+[16:35:04.557] - Authenticate user: mikael
+[16:35:13.171] - Creating Calendar "Work" for mikael
+[16:35:20.245] - Creating Calendar "Private" for mikael
+[16:37:15.487] - Authenticate user: mikael
+[16:39:59.056] - Authenticate user: mikael
+[16:41:07.138] - Creating meeting: Weee
+[17:07:36.628] - Authenticate user: mika
+[17:07:36.788] - Authentication failed. Invalid credentials.
+[17:07:45.514] - Authenticate user: mikael
+[17:08:01.206] - Creating Calendar "Semester" for mikael
+[17:09:19.392] - Authenticate user: mikael
+[17:10:18.313] - Creating meeting: Camping
+[17:10:18.388] - Error occurred while creating meeting: Camping
+[17:11:34.636] - Creating Calendar "Work" for mikael
+[17:11:59.837] - Creating meeting: Scrum
+[17:13:11.387] - Creating Calendar "Private" for mikael
+[17:21:28.488] - Creating user: mikael
+[17:23:21.728] - Authenticate user: mikael
+[17:24:12.594] - Creating Calendar "Work" for mikael
+[17:24:17.314] - Creating Calendar "Private" for mikael
+[20:00:47.043] - Authenticate user: mikael
+[20:07:37.187] - Authenticate user: mikael
+[20:10:37.676] - Authenticate user: mikael
+[20:16:45.027] - Authenticate user: mikael
+[20:17:29.922] - Authenticate user: mikael
+[20:31:07.562] - Authenticate user: mikael

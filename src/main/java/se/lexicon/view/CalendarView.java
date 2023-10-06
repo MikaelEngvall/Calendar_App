@@ -19,7 +19,6 @@ public interface CalendarView {
         System.out.println("5. Delete Calendar");
         System.out.println("6. Logout");
         System.out.println("7. Exit");
-        System.out.println("8. Find Meeting by Calendar Name");
         System.out.println("Enter your choice: ");
     }
 
