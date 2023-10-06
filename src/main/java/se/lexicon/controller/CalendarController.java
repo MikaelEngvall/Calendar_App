@@ -17,10 +17,10 @@ import java.util.Scanner;
 public class CalendarController {
 
     // dependencies
-    private CalendarView view;
-    private UserDao userDao;
-    private MeetingCalendarDao meetingCalendarDao;
-    private MeetingDao meetingDao;
+    private final CalendarView view;
+    private final UserDao userDao;
+    private final MeetingCalendarDao meetingCalendarDao;
+    private final MeetingDao meetingDao;
     // fields
     private boolean isLoggedIn;
     private String username;
@@ -202,13 +202,13 @@ public class CalendarController {
         try {
             //find all calendars by username
             ArrayList<MeetingCalendar> foundCalendars = new ArrayList<>(meetingCalendarDao.findByUserName(username));
-            for (int i = 0; i < foundCalendars.size(); i++) {
+            for (MeetingCalendar foundCalendar : foundCalendars) {
                 //print out calendar title
                 System.out.println("**********");
-                System.out.println(foundCalendars.get(i).getTitle());
+                System.out.println(foundCalendar.getTitle());
                 System.out.println("*********");
                 //for every calendar, print out each meeting related to that calendar
-                ArrayList<Meeting> foundMeetings = new ArrayList<>(meetingDao.findAllMeetingsByCalendarId(foundCalendars.get(i).getId()));
+                ArrayList<Meeting> foundMeetings = new ArrayList<>(meetingDao.findAllMeetingsByCalendarId(foundCalendar.getId()));
                 view.displayMeetings(foundMeetings);
                 System.out.println("*********");
             }

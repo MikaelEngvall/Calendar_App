@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class CalendarConsoleUI implements CalendarView {
-    private MeetingCalendarDao meetingCalendarDao;
+    private final MeetingCalendarDao meetingCalendarDao;
 
     public CalendarConsoleUI(MeetingCalendarDao meetingCalendarDao) {
         this.meetingCalendarDao = meetingCalendarDao;
@@ -76,23 +76,43 @@ public class CalendarConsoleUI implements CalendarView {
             meetingCalendar = foundCalendars.get(choice);
             scanner.nextLine();
         }
-
+        DateTimeFormatter formattedDateTime = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
         System.out.println("Enter a Meeting title: ");
         String title = scanner.nextLine();
 
-        System.out.println("Start Date & Time (yyyy-MM-dd HH:mm)");
-        String start = scanner.nextLine();
-
-        System.out.println("End Date & Time (yyyy-MM-dd HH:mm)");
-        String end = scanner.nextLine();
+        boolean validDT = false;
+        LocalDateTime startDateTime = LocalDateTime.now();
+        while (!validDT) {
+            System.out.println("Start Date & Time (yyyy-MM-dd HH:mm)");
+            String start = scanner.nextLine();
+            startDateTime = LocalDateTime.parse(start, formattedDateTime);
+            if (startDateTime.isBefore(LocalDateTime.now())) {
+                System.out.println("You cannot enter a date and time prior to actual date and time. Try again please!");
+                validDT = false;
+            } else {
+                validDT = true;
+            }
+        }
+        validDT = false;
+        LocalDateTime endDateTime = LocalDateTime.now();
+        while (!validDT) {
+            System.out.println("End Date & Time (yyyy-MM-dd HH:mm)");
+            String end = scanner.nextLine();
+            endDateTime = LocalDateTime.parse(end, formattedDateTime);
+            if (endDateTime.isBefore(startDateTime)) {
+                System.out.println("You cannot enter a date and time prior to start date and time. Try again please!");
+                validDT = false;
+            } else {
+                validDT = true;
+            }
+        }
 
         System.out.println("Description: ");
         String description = scanner.nextLine();
 
-        LocalDateTime startDateTime = LocalDateTime.parse(start, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
-        LocalDateTime endDateTime = LocalDateTime.parse(end, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
 
         return new Meeting(title, startDateTime, endDateTime, description, meetingCalendar);
+
     }
 
     @Override

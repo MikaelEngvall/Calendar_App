@@ -7,18 +7,15 @@ import se.lexicon.dao.UserDao;
 import se.lexicon.dao.impl.MeetingCalendarDaoImpl;
 import se.lexicon.dao.impl.MeetingDaoImpl;
 import se.lexicon.dao.impl.UserDaoImpl;
-import se.lexicon.dao.impl.db.MeetingCalendarDBConnection;
 import se.lexicon.view.CalendarConsoleUI;
 import se.lexicon.view.CalendarView;
-
-import java.sql.Connection;
 
 public class App {
     public static void main(String[] args) {
         System.setProperty("log4j.configurationFile", "log4j2.properties");
 
 
-        Connection mysqlConnection = MeetingCalendarDBConnection.getConnection();
+//        Connection mysqlConnection = MeetingCalendarDBConnection.getConnection();
         UserDao userDao = new UserDaoImpl();
         MeetingCalendarDao meetingCalendarDao = new MeetingCalendarDaoImpl();
         CalendarView view = new CalendarConsoleUI(meetingCalendarDao);

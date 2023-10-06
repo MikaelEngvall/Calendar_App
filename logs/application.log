@@ -138,3 +138,8 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 [20:16:45.027] - Authenticate user: mikael
 [20:17:29.922] - Authenticate user: mikael
 [20:31:07.562] - Authenticate user: mikael
+[00:30:23.035] - Authenticate user: mikael
+[00:31:45.130] - Authenticate user: mikael
+[00:32:37.441] - Creating meeting: Trying the date time check
+[00:37:50.000] - Authenticate user: mikael
+[00:38:59.549] - Creating meeting: Trying to put an end date and time prior to start time
