@@ -88,7 +88,7 @@ public class CalendarConsoleUI implements CalendarView {
             startDateTime = LocalDateTime.parse(start, formattedDateTime);
             if (startDateTime.isBefore(LocalDateTime.now())) {
                 System.out.println("You cannot enter a date and time prior to actual date and time. Try again please!");
-                validDT = false;
+//                validDT = false;
             } else {
                 validDT = true;
             }
@@ -101,7 +101,7 @@ public class CalendarConsoleUI implements CalendarView {
             endDateTime = LocalDateTime.parse(end, formattedDateTime);
             if (endDateTime.isBefore(startDateTime)) {
                 System.out.println("You cannot enter a date and time prior to start date and time. Try again please!");
-                validDT = false;
+//                validDT = false;
             } else {
                 validDT = true;
             }
